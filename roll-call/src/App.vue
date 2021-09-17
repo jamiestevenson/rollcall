@@ -17,6 +17,9 @@
 </template>
 
 <style>
+body {
+  background-image: linear-gradient(90deg, #414850, #131720);
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
