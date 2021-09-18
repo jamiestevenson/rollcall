@@ -1,6 +1,6 @@
 <template>
   <div class="everyone">
-    <h1>Welcome to the directory!</h1>
+    <h1>Welcome to our directory!</h1>
     <card-table v-bind="people" />
   </div>
 </template>
@@ -17,7 +17,6 @@ export default defineComponent({
   },
   computed: {
     people() {
-      console.log(`computed state: ${JSON.stringify(this.$store.state)}`);
       return this.$store.state;
     },
   },

@@ -1,6 +1,5 @@
 <template>
   <div class="card-table">
-    <h3>Card Table</h3>
     <div class="card-container">
     <profile-card
       class="card" v-for="p in people" v-bind:key="p.id" :person="p">

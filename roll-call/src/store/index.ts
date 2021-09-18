@@ -5,6 +5,7 @@ const samplePeople: Person[] = [
   {
     id: 1,
     name: "Bob",
+    title: "Technical Architect",
     team: "Integrations",
     emoji: "🧱",
     rating: 228
@@ -12,6 +13,7 @@ const samplePeople: Person[] = [
   {
     id: 2,
     name: "Sue",
+    title: "Developer",
     team: "Mobile",
     emoji: "📱",
     rating: 394
@@ -19,6 +21,7 @@ const samplePeople: Person[] = [
   {
     id: 3,
     name: "Pete",
+    title: "Account Developer",
     team: "Sales",
     emoji: "💸",
     rating: 103
@@ -26,6 +29,7 @@ const samplePeople: Person[] = [
   {
     id: 4,
     name: "Dawn",
+    title: "Senior Developer",
     team: "Production",
     emoji: "🧭",
     rating: 903
@@ -33,6 +37,7 @@ const samplePeople: Person[] = [
   {
     id: 5,
     name: "Alex",
+    title: "Graduate UX Designer",
     team: "Design",
     emoji: "🎨",
     rating: 620

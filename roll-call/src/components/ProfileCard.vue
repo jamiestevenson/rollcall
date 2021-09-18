@@ -6,14 +6,12 @@
           {{person.emoji}}
         </div>
       </div>
-      <div class="productinfo">
+      <div class="personinfo">
         <div class="grouptext">
-          <h3>NAME</h3>
-          <p>{{person.name}}</p>
+          <h3>{{person.name}}</h3>
         </div>
         <div class="grouptext">
-          <h3>TEAM</h3>
-          <p>{{person.team}}</p>
+          <p>{{person.title}} - {{person.team}}</p>
         </div>
       </div>
     </div>
@@ -88,7 +86,7 @@ export default defineComponent({
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
 *, button, input {
   margin: 0px;
   padding: 0px;
@@ -97,17 +95,10 @@ export default defineComponent({
 }
 
 :root {
-  --bg-shape-color:linear-gradient(120deg, #343A4F, #0F1620) ;
+  --bg-shape-color:linear-gradient(120deg, #343A4F, #0F1620);
   --lightblue: #3D9DEA;
   --darkblue: #4A4EEE;
   --text-color: #D5E1EF;
-}
-
-html, body {
-  width: 100%;
-  min-height: 100vh;
-  background-image: linear-gradient(90deg, #414850, #131720);
-  color: var(--text-color);
 }
 
 body {
@@ -120,7 +111,7 @@ body {
 .wrapper {
   width: 350px;
   border-radius: 40px;
-  background-image: var(--bg-shape-color);
+  background-image: linear-gradient(120deg, #343A4F, #0F1620);
   overflow: hidden;
   margin: 20px;
 }
@@ -130,7 +121,7 @@ body {
 }
 
 .overviewInfo {
-  background-image: linear-gradient(176deg, var(--lightblue), var(--darkblue));
+  background-image: linear-gradient(176deg, #3D9DEA, #4A4EEE);
 }
 
 .actions {
@@ -151,7 +142,7 @@ body {
 }
 
 .neurobutton {
-  background-image: var(--bg-shape-color);
+  background-image: linear-gradient(120deg, #343A4F, #0F1620);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,30 +153,13 @@ body {
     2px 2px 6px 3px rgba(0, 0, 0, 0.4);
 }
 
-.productinfo {
+.personinfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   min-height: 100px;
   margin-bottom: 10px;
-}
-
-.productImage {
-  position: absolute;
-  width: 321px;
-  height: auto;
-  transform: rotate(-90deg) translate(-56px, 66px);
-  transition: ease 2s all;
-}
-.productImage img {
-  width: 100%;
-  height: auto;
-}
-.productImage:hover {
-  transition: ease 2s all;
-  animation: none;
-  transform: rotate(-70deg) translate(10px, 66px);
 }
 
 h1 {
@@ -197,17 +171,19 @@ h1 {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
+  float: left;
 }
 .grouptext p {
   font-size: 12px;
   opacity: 0.8;
+  float: left;
 }
 
 /* product specifications */
 .featureIcon {
   width: 40px;
   height: 40px;
-  background-image: var(--bg-shape-color);
+  background-image: linear-gradient(120deg, #343A4F, #0F1620);
   border-radius: 8px;
   margin-right: 16px;
 }
@@ -235,7 +211,7 @@ h1 {
 .checkoutButton {
   display: flex;
   width: 100%;
-  background-image: var(--bg-shape-color);
+  background-image: linear-gradient(120deg, #343A4F, #0F1620);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1),
