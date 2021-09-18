@@ -5,4 +5,5 @@ export interface Person {
   team: string;
   emoji: string;
   rating: number;
+  cardImage: string;
 }

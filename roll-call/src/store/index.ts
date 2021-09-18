@@ -8,7 +8,8 @@ const samplePeople: Person[] = [
     title: "Technical Architect",
     team: "Integrations",
     emoji: "🧱",
-    rating: 228
+    rating: 228,
+    cardImage: require("../assets/portrait/1.jpg")
   },
   {
     id: 2,
@@ -16,7 +17,8 @@ const samplePeople: Person[] = [
     title: "Developer",
     team: "Mobile",
     emoji: "📱",
-    rating: 394
+    rating: 394,
+    cardImage: require("../assets/portrait/default.jpg")
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ const samplePeople: Person[] = [
     title: "Account Developer",
     team: "Sales",
     emoji: "💸",
-    rating: 103
+    rating: 103,
+    cardImage: require("../assets/portrait/default.jpg")
   },
   {
     id: 4,
@@ -32,7 +35,8 @@ const samplePeople: Person[] = [
     title: "Senior Developer",
     team: "Production",
     emoji: "🧭",
-    rating: 903
+    rating: 903,
+    cardImage: require("../assets/portrait/default.jpg")
   },
   {
     id: 5,
@@ -40,7 +44,8 @@ const samplePeople: Person[] = [
     title: "Graduate UX Designer",
     team: "Design",
     emoji: "🎨",
-    rating: 620
+    rating: 620,
+    cardImage: require("../assets/portrait/default.jpg")
   },
 ];
 

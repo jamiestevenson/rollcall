@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="overviewInfo">
+      <img class="card-image" :src="person.cardImage" />
       <div class="actions">
         <div class="cartbutton neurobutton">
           {{person.emoji}}
@@ -8,10 +9,10 @@
       </div>
       <div class="personinfo">
         <div class="grouptext">
-          <h3>{{person.name}}</h3>
+          <p>{{person.title}} - {{person.team}}</p>
         </div>
         <div class="grouptext">
-          <p>{{person.title}} - {{person.team}}</p>
+          <h3>{{person.name}}</h3>
         </div>
       </div>
     </div>
@@ -75,14 +76,26 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "profile-card",
-  props: {
-    person: Object,
-  },
-});
+  import { defineComponent } from 'vue';
+  export default defineComponent({
+    name: 'profile-card',
+    props: {
+        person: {
+          type: Object,
+          required: true
+        }
+    },
+    computed: {
+      portrait() { 
+        // https://github.com/vuejs-templates/webpack/issues/566
+        // console.log('card path');
+        // let id = this.person?.id ? this.person.id :'default';
+        // const path: string = '../assets/portrait/' + id + '.jpg';
+        // console.log('card path: ' + path);
+        return require("@/assets/portrait/" + this.person.id + ".jpg");
+      },
+    },
+  })
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -110,7 +123,7 @@ body {
 
 .wrapper {
   width: 350px;
-  border-radius: 40px;
+  border-radius:30px;
   background-image: linear-gradient(120deg, #343A4F, #0F1620);
   overflow: hidden;
   margin: 20px;
@@ -155,11 +168,12 @@ body {
 
 .personinfo {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column-reverse;
   position: relative;
   min-height: 100px;
   margin-bottom: 10px;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }
 
 h1 {
