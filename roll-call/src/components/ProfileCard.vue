@@ -1,18 +1,20 @@
 <template>
   <div class="wrapper">
-    <div class="overviewInfo">
-      <img class="card-image" :src="person.cardImage" />
-      <div class="actions">
-        <div class="cartbutton neurobutton">
-          {{person.emoji}}
+    <div class="top-wrapper"> 
+      <div class="overviewInfo" :style="{ 'background-image': 'url(' + person.cardImage + ')' }">
+        <div class="actions">
+          <div class="cartbutton neurobutton">
+            {{person.emoji}}
+          </div>
         </div>
-      </div>
-      <div class="personinfo">
-        <div class="grouptext">
-          <p>{{person.title}} - {{person.team}}</p>
-        </div>
-        <div class="grouptext">
-          <h3>{{person.name}}</h3>
+        <!-- <img class="personImage" :src="person.cardImage" /> -->
+        <div class="personinfo">
+          <div class="grouptext">
+            <p>{{person.title}} - {{person.team}}</p>
+          </div>
+          <div class="grouptext">
+            <h3>{{person.name}}</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -85,16 +87,6 @@
           required: true
         }
     },
-    computed: {
-      portrait() { 
-        // https://github.com/vuejs-templates/webpack/issues/566
-        // console.log('card path');
-        // let id = this.person?.id ? this.person.id :'default';
-        // const path: string = '../assets/portrait/' + id + '.jpg';
-        // console.log('card path: ' + path);
-        return require("@/assets/portrait/" + this.person.id + ".jpg");
-      },
-    },
   })
 </script>
 
@@ -133,8 +125,27 @@ body {
   padding: 24px;
 }
 
+.personImage .overviewInfo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .overviewInfo {
-  background-image: linear-gradient(176deg, #3D9DEA, #4A4EEE);
+  z-index: 10;
+}
+
+.overviewInfo {
+  /* background-image: linear-gradient(176deg, #3D9DEA, #4A4EEE); */
+  background-color: #3D9DEA;
+  background-size: 100%;
+}
+
+.personImage {
+  max-width:100%;
+  max-height:100%;
 }
 
 .actions {
@@ -186,11 +197,15 @@ h1 {
   font-weight: 500;
   margin-bottom: 8px;
   float: left;
+  background: #343A4F;
+  box-shadow: 2px 2px #0F1620;
 }
 .grouptext p {
   font-size: 12px;
   opacity: 0.8;
   float: left;
+  background: #343A4F;
+  box-shadow: 2px 2px #0F1620;
 }
 
 /* product specifications */

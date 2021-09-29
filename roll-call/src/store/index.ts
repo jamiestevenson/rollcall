@@ -9,7 +9,7 @@ const samplePeople: Person[] = [
     team: "Integrations",
     emoji: "🧱",
     rating: 228,
-    cardImage: require("../assets/portrait/1.jpg")
+    cardImage: require("../assets/portrait/1.jpg"),
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const samplePeople: Person[] = [
     team: "Mobile",
     emoji: "📱",
     rating: 394,
-    cardImage: require("../assets/portrait/default.jpg")
+    cardImage: require("../assets/portrait/woman-3170568_1920.jpg"),
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const samplePeople: Person[] = [
     team: "Sales",
     emoji: "💸",
     rating: 103,
-    cardImage: require("../assets/portrait/default.jpg")
+    cardImage: require("../assets/portrait/men-1276384_1920.jpg"),
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const samplePeople: Person[] = [
     team: "Production",
     emoji: "🧭",
     rating: 903,
-    cardImage: require("../assets/portrait/default.jpg")
+    cardImage: require("../assets/portrait/suit-673697_1920.jpg"),
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const samplePeople: Person[] = [
     team: "Design",
     emoji: "🎨",
     rating: 620,
-    cardImage: require("../assets/portrait/default.jpg")
+    cardImage: require("../assets/portrait/continental-bulldog-2437110_1920.jpg"),
   },
 ];
 
