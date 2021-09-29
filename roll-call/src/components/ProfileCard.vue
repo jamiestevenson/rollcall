@@ -25,29 +25,29 @@
         <div class="feature">
           <div class="featureIcon"></div>
           <div class="featureText">
-            <p><strong>Futuristic</strong></p>
-            <p>Design</p>
+            <p><strong>Leadership</strong></p>
+            <p>Mentor</p>
           </div>
         </div>
         <div class="feature">
           <div class="featureIcon"></div>
           <div class="featureText">
-            <p><strong>Built-in</strong></p>
-            <p>Microphone</p>
+            <p><strong>Background</strong></p>
+            <p>Multimedia</p>
           </div>
         </div>
         <div class="feature">
           <div class="featureIcon"></div>
           <div class="featureText">
-            <p><strong>Haptic</strong></p>
-            <p>Feedback</p>
+            <p><strong>Workspace</strong></p>
+            <p>Library</p>
           </div>
         </div>
         <div class="feature">
           <div class="featureIcon"></div>
           <div class="featureText">
-            <p><strong>Fast charge</strong></p>
-            <p>USB-C port</p>
+            <p><strong>Hobby</strong></p>
+            <p>Running</p>
           </div>
         </div>
       </div>
