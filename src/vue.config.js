@@ -1,1 +1,1 @@
-module.exports = { publicPath: "/roll-call/" };
+module.exports = { publicPath: "/rollcall/" }
