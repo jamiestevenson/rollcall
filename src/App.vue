@@ -19,8 +19,8 @@
 </template>
 
 <style>
-
-html, body {
+html,
+body {
   width: 100%;
   min-height: 100vh;
   background: black;
@@ -38,9 +38,9 @@ html, body {
   padding: 30px;
   position: sticky;
   align-self: center;
-  top:0;
+  top: 0;
   background: black;
-  border-bottom: 1px solid #3D9DEA;
+  border-bottom: 1px solid #3d9dea;
   z-index: 1000;
 }
 
@@ -54,10 +54,10 @@ html, body {
 }
 
 footer {
-  position:sticky;
-  bottom:0;
+  position: sticky;
+  bottom: 0;
   background: black;
-  border-top: 1px solid #3D9DEA;
+  border-top: 1px solid #3d9dea;
   padding: 5px;
 }
 </style>

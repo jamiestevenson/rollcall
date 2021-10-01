@@ -4,7 +4,7 @@
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the README.md files in the source code.
-    </p>  
+    </p>
   </div>
 </template>
 

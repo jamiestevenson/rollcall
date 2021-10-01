@@ -1,19 +1,21 @@
 <template>
   <div class="wrapper">
-    <div class="top-wrapper"> 
-      <div class="overviewInfo" :style="{ 'background-image': 'url(' + person.cardImage + ')' }">
+    <div class="top-wrapper">
+      <div
+        class="overviewInfo"
+        :style="{ 'background-image': 'url(' + person.cardImage + ')' }"
+      >
         <div class="actions">
           <div class="cartbutton neurobutton">
-            {{person.emoji}}
+            {{ icon }}
           </div>
         </div>
-        <!-- <img class="personImage" :src="person.cardImage" /> -->
         <div class="personinfo">
           <div class="grouptext">
-            <p>{{person.title}} - {{person.team}}</p>
+            <p>{{ person.title }} - {{ person.team }}</p>
           </div>
           <div class="grouptext">
-            <h3>{{person.name}}</h3>
+            <h3>{{ person.name }}</h3>
           </div>
         </div>
       </div>
@@ -52,7 +54,7 @@
         </div>
       </div>
       <div class="checkoutButton">
-        <div class="priceTag"><span>🎉 </span>{{person.rating}}</div>
+        <div class="priceTag"><span>🎉 </span>{{ person.rating }}</div>
         <button class="preorder">
           <p>Profile</p>
           <div class="buttonaction">
@@ -78,21 +80,29 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue';
-  export default defineComponent({
-    name: 'profile-card',
-    props: {
-        person: {
-          type: Object,
-          required: true
-        }
+import { defineComponent } from "vue";
+import { Icons } from "../types/Department";
+export default defineComponent({
+  name: "profile-card",
+  props: {
+    person: {
+      type: Object,
+      required: true,
     },
-  })
+  },
+  computed: {
+    icon(): string {
+      return Icons.get(this.person.team) ?? "🍔";
+    }
+  },
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-*, button, input {
+*,
+button,
+input {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -100,10 +110,10 @@
 }
 
 :root {
-  --bg-shape-color:linear-gradient(120deg, #343A4F, #0F1620);
-  --lightblue: #3D9DEA;
-  --darkblue: #4A4EEE;
-  --text-color: #D5E1EF;
+  --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+  --lightblue: #3d9dea;
+  --darkblue: #4a4eee;
+  --text-color: #d5e1ef;
 }
 
 body {
@@ -115,13 +125,14 @@ body {
 
 .wrapper {
   width: 350px;
-  border-radius:30px;
-  background-image: linear-gradient(120deg, #343A4F, #0F1620);
+  border-radius: 30px;
+  background-image: linear-gradient(120deg, #343a4f, #0f1620);
   overflow: hidden;
   margin: 20px;
 }
 
-.overviewInfo, .productSpecifications {
+.overviewInfo,
+.productSpecifications {
   padding: 24px;
 }
 
@@ -139,13 +150,13 @@ body {
 
 .overviewInfo {
   /* background-image: linear-gradient(176deg, #3D9DEA, #4A4EEE); */
-  background-color: #3D9DEA;
+  background-color: #3d9dea;
   background-size: 100%;
 }
 
 .personImage {
-  max-width:100%;
-  max-height:100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .actions {
@@ -159,19 +170,19 @@ body {
   font-size: 16pt;
 }
 
-.actions .backbutton, .actions .cartbutton {
+.actions .backbutton,
+.actions .cartbutton {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
 .neurobutton {
-  background-image: linear-gradient(120deg, #343A4F, #0F1620);
+  background-image: linear-gradient(120deg, #343a4f, #0f1620);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow:
-    inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1),
+  box-shadow: inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1),
     inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1),
     -2px -2px 8px 2px rgba(255, 255, 255, 0.1),
     2px 2px 6px 3px rgba(0, 0, 0, 0.4);
@@ -197,22 +208,22 @@ h1 {
   font-weight: 500;
   margin-bottom: 8px;
   float: left;
-  background: #343A4F;
-  box-shadow: 2px 2px #0F1620;
+  background: #343a4f;
+  box-shadow: 2px 2px #0f1620;
 }
 .grouptext p {
   font-size: 12px;
   opacity: 0.8;
   float: left;
-  background: #343A4F;
-  box-shadow: 2px 2px #0F1620;
+  background: #343a4f;
+  box-shadow: 2px 2px #0f1620;
 }
 
 /* product specifications */
 .featureIcon {
   width: 40px;
   height: 40px;
-  background-image: linear-gradient(120deg, #343A4F, #0F1620);
+  background-image: linear-gradient(120deg, #343a4f, #0f1620);
   border-radius: 8px;
   margin-right: 16px;
 }
@@ -240,7 +251,7 @@ h1 {
 .checkoutButton {
   display: flex;
   width: 100%;
-  background-image: linear-gradient(120deg, #343A4F, #0F1620);
+  background-image: linear-gradient(120deg, #343a4f, #0f1620);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1),
@@ -286,5 +297,4 @@ button.preorder {
   align-items: center;
   justify-content: center;
 }
-
 </style>

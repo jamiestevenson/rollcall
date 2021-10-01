@@ -1,9 +1,13 @@
 <template>
   <div class="card-table">
     <div class="card-container">
-    <profile-card
-      class="card" v-for="p in people" v-bind:key="p.id" :person="p">
-    </profile-card>
+      <profile-card
+        class="card"
+        v-for="p in people"
+        v-bind:key="p.id"
+        :person="p"
+      >
+      </profile-card>
     </div>
   </div>
 </template>
@@ -21,11 +25,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.card-container{
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 40px 0px;
+.card-container {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px 0px;
 }
 </style>
