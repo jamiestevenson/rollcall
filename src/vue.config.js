@@ -1,1 +1,4 @@
-module.exports = { publicPath: "/rollcall/" }
+module.exports = {   
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/rollcall/'
+        : '/' }
